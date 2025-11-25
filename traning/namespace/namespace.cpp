@@ -6,9 +6,18 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 20:31:03 by imatouil          #+#    #+#             */
-/*   Updated: 2025/10/28 13:39:39 by imatouil         ###   ########.fr       */
+/*   Updated: 2025/11/25 16:46:14 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// In C++, a namespace is a named scope
+// or container that is used to organize
+// and enclose a collection of code elements,
+// such as variables, functions, classes, and
+// other namespaces. They are mainly used to
+// divide and manage the code base, giving
+// developers control over name collisions 
+// and the specialization of code.
 
 #include <iostream>
 using namespace std;
