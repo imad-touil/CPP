@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 19:44:13 by imatouil          #+#    #+#             */
-/*   Updated: 2025/11/26 20:33:27 by codespace        ###   ########.fr       */
+/*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
+/*   Updated: 2025/11/26 20:33:52 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>
 
-class	PhoneBook
+class   Contact
 {
-	Contact contact[10];
-	int		index;
+    private:
+        std::string firstname;
+        std::string lastname;
+        std::string nackname;
+        std::string phonenumber;
+        std::string darckestsecret;
+    public:
+    
+}
 
-	public:
-		void	SayHello(std::string name)
-		{
-			std::cout << "Hello " << name << std::endl;
-		}
-};
-# endif
+#endif
