@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 19:44:13 by imatouil          #+#    #+#             */
-/*   Updated: 2025/11/26 20:33:27 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/26 21:50:00 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class	PhoneBook
 {
-	Contact contact[10];
+	Contact contacts[8];
 	int		index;
 
 	public:
-		void	SayHello(std::string name)
-		{
-			std::cout << "Hello " << name << std::endl;
-		}
+		void	AddContact();
+		void	DisplayTable();
+		void	DisplayContact();
 };
+
 # endif
