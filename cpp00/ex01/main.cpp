@@ -1,8 +1,9 @@
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 
 int main(void)
 {
-    PhoneBook book;
-    book.SayHello("Toto");
+    Contact contact1;
+    contact1.SetData();
 }
