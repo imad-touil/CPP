@@ -1,25 +1,36 @@
-NAME = megaphone
-CC = c++
-CFLAGS =-Wall -Wextra -Werror -std=c++98
-SRCS = megaphone.cpp
-OBJS = $(SRCS:.cpp=.o)
+# **************************************************************************** #
+#                                   CONFIG                                     #
+# **************************************************************************** #
 
+NAME        = phonebook
+
+CXX         = c++
+CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
+
+SRC         = main.cpp \
+              PhoneBook.cpp \
+              Contact.cpp
+
+OBJ         = $(SRC:.cpp=.o)
+
+# **************************************************************************** #
+#                                   RULES                                      #
+# **************************************************************************** #
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	@$(CC) $(CFLAGS) -c $< -o $@
-
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	@rm -rf $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean 
+.PHONY: all clean fclean re

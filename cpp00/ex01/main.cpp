@@ -4,6 +4,7 @@
 
 int main(void)
 {
-    Contact contact1;
-    contact1.SetData();
+    PhoneBook   pb1;
+
+    pb1.AddContact();
 }
