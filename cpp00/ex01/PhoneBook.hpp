@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 19:44:13 by imatouil          #+#    #+#             */
-/*   Updated: 2025/11/27 18:50:35 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/28 20:35:33 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_H
 
 #include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 class	PhoneBook
