@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/27 20:43:24 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/28 21:21:29 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,12 @@
 
 #include <iostream>
 
-enum ContactField {
-    FirstName,
-    LastName,
-    NickName,
-    PhoneNumber,
-	DarkestSecret
-};
-
 class   Contact
 {
 	public:
 		Contact();
 		void		SetData();
-		std::string	GetData(ContactField field) const;
+		std::string	GetData(int index) const;
 	private:
 		std::string firstname;
 		std::string lastname;
