@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 19:44:13 by imatouil          #+#    #+#             */
-/*   Updated: 2025/11/28 20:35:33 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/29 11:17:48 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class	PhoneBook
 
 	public:
 		PhoneBook();
-		void	AddContact();
+		void	Add();
 		void	DisplayTable();
-		void	DisplayContact();
+		void	Search();
 };
 
 # endif

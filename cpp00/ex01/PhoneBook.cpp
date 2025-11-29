@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:00:15 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/28 21:49:54 by codespace        ###   ########.fr       */
+/*   Updated: 2025/11/29 12:21:05 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 PhoneBook::PhoneBook() : counter(0) {}
 
-void    PhoneBook::AddContact()
+void    PhoneBook::Add()
 {
 	int index;
 
@@ -37,7 +37,7 @@ void	PhoneBook::DisplayTable()
 	int	size;
 
 	std::cout << "--------------------------------------------------------\n";
-    std::cout << "|   Index  |First Name| Last Name| Nickname | phonenbr |\n";
+    std::cout << "|     Index|First Name| Last Name|  Nickname|  phonenbr|\n";
     std::cout << "--------------------------------------------------------\n";
 	size = 8;
 	if (counter < 8)
@@ -50,4 +50,32 @@ void	PhoneBook::DisplayTable()
 		std::cout << "|\n";
 	}
 	std::cout << "--------------------------------------------------------\n";
+}
+
+void	PhoneBook::Search()
+{
+	int			index;
+	std::string	input;
+
+	if (counter == 0)
+	{
+		std::cout << "PhoneBook Is Empty\n";
+		return ;
+	}
+	DisplayTable();
+	std::cout << "Enter index: ";
+	getline(std::cin, input);
+	if (input.length() != 1 || input[0] < '0'
+		|| input[0] > '7')
+	{
+		std::cout << "Hint👀: 0-7\n";
+		return ;
+	}
+	index = input[0] - 48;
+	if (index >= counter)
+	{
+		std::cout << "Out Of Range\n";
+		return ;
+	}
+	contacts[index].Display();
 }
