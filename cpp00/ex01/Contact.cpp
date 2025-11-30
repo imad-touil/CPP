@@ -6,26 +6,35 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 22:19:46 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/29 12:21:29 by imatouil         ###   ########.fr       */
+/*   Updated: 2025/11/30 13:18:04 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact() {}
+Contact::Contact()
+	: firstname(""), lastname(""),
+	nickname(""), phonenumber(""),
+	darckestsecret("") {}
+
+void	Contact::Helper(std::string &input) const
+{
+	if (!getline(std::cin, input))
+		exit(0);
+}
 
 void	Contact::SetData()
 {
 	std::cout << "Enter The First Name: ";
-	getline(std::cin, firstname);
+	Helper(firstname);
 	std::cout << "Enter The Last Name: ";
-	getline(std::cin, lastname);
+	Helper(lastname);
 	std::cout << "Enter The nickname Name: ";
-	getline(std::cin, nickname);
+	Helper(nickname);
 	std::cout << "Enter The Phone Number: ";
-	getline(std::cin, phonenumber);
+	Helper(phonenumber);;
 	std::cout << "Enter The Darcket Secret: ";
-	getline(std::cin, darckestsecret);
+	Helper(darckestsecret);
 }
 
 std::string	Contact::GetData(int index) const

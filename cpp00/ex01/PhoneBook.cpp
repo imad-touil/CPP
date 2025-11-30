@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 20:00:15 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/29 12:21:05 by imatouil         ###   ########.fr       */
+/*   Updated: 2025/11/30 13:20:00 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ void	PhoneBook::Search()
 	}
 	DisplayTable();
 	std::cout << "Enter index: ";
-	getline(std::cin, input);
+	if (!getline(std::cin, input))
+			exit(0);
 	if (input.length() != 1 || input[0] < '0'
 		|| input[0] > '7')
 	{

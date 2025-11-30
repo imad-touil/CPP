@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/30 13:13:30 by imatouil         ###   ########.fr       */
+/*   Created: 2025/11/30 10:26:36 by imatouil          #+#    #+#             */
+/*   Updated: 2025/11/30 10:40:09 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#ifndef TEST_HPP
+#define TEST_HPP
 
 #include <iostream>
 
-class   Contact
+class Test
 {
 	public:
-		Contact();
-		void		SetData();
-		std::string	GetData(int index) const;
-		void	Display() const;
-		void	Helper(std::string &input) const;
+		Test();
+		int	x;
+		void	incremnt(int *x);
 	private:
-		std::string firstname;
-		std::string lastname;
-		std::string nickname;
-		std::string phonenumber;
-		std::string darckestsecret;
+		int	y;
 };
+
 
 #endif

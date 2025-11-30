@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/30 13:13:30 by imatouil         ###   ########.fr       */
+/*   Created: 2025/11/30 10:26:32 by imatouil          #+#    #+#             */
+/*   Updated: 2025/11/30 12:30:19 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#include "test.hpp"
 
-#include <iostream>
+Test::Test() {}
 
-class   Contact
+void	Test::incremnt(int *x)
 {
-	public:
-		Contact();
-		void		SetData();
-		std::string	GetData(int index) const;
-		void	Display() const;
-		void	Helper(std::string &input) const;
-	private:
-		std::string firstname;
-		std::string lastname;
-		std::string nickname;
-		std::string phonenumber;
-		std::string darckestsecret;
-};
+	*x += 1;
+	std::cout << Test::y;
+}
 
-#endif
+int	main(void)
+{
+	Test	test1;
+
+	test1.x = 1336;
+	std::cout << test1.x << std::endl;
+	test1.incremnt(&test1.x);
+	std::cout << test1.x << std::endl;
+}
+

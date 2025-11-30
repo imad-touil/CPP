@@ -9,7 +9,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-		getline(std::cin, command);
+		if (!getline(std::cin, command))
+			exit(0);
 		if (command == "ADD")
 			pb1.Add();
 		else if (command == "SEARCH")
@@ -17,7 +18,6 @@ int	main(void)
 		else if (command == "EXIT")
 			break ;
 		else
-			std::cout << "No No, Use:    👇  || 👇  ||  👇\n";
-		
+			std::cout << "No No, Use:    👇 ||  👇  || 👇\n";
 	}
 }

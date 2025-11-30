@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/30 13:13:30 by imatouil         ###   ########.fr       */
+/*   Created: 2025/11/29 13:50:50 by imatouil          #+#    #+#             */
+/*   Updated: 2025/11/29 13:51:21 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
-
 #include <iostream>
 
-class   Contact
+int	main(void)
 {
-	public:
-		Contact();
-		void		SetData();
-		std::string	GetData(int index) const;
-		void	Display() const;
-		void	Helper(std::string &input) const;
-	private:
-		std::string firstname;
-		std::string lastname;
-		std::string nickname;
-		std::string phonenumber;
-		std::string darckestsecret;
-};
-
-#endif
+	std::cout << "Hello World\n";
+}
