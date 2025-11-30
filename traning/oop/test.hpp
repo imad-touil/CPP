@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 10:26:36 by imatouil          #+#    #+#             */
-/*   Updated: 2025/11/30 10:40:09 by imatouil         ###   ########.fr       */
+/*   Updated: 2025/11/30 16:20:43 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Test
 		Test();
 		int	x;
 		void	incremnt(int *x);
+		~Test();
 	private:
 		int	y;
 };
