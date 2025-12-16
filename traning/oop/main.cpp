@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/30 10:26:32 by imatouil          #+#    #+#             */
-/*   Updated: 2025/12/16 20:22:25 by imatouil         ###   ########.fr       */
+/*   Created: 2025/12/16 18:33:31 by imatouil          #+#    #+#             */
+/*   Updated: 2025/12/16 18:46:00 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.hpp"
+#include <iostream>
+#include <iomanip>
 
-void	Programmer::SetName(std::string name)
+int	main(void)
 {
-	this->name = name;
-}
+	std::string	name;
 
-std::string	Programmer::GetName() const {return name;}
-
-int 	main(void)
-{
-	Programmer pr;
-
-	pr.SetName("Imad\n");
-	std::cout << pr.GetName();
+	name = "Imad";
+	name += " Touil";
+	
+	// std::cout << std::setfill('*') << std::left << std::setw(20) << name << std::endl;
 }
