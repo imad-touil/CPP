@@ -5,11 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 20:00:15 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/30 13:20:00 by imatouil         ###   ########.fr       */
+/*   Created: 2025/12/16 11:14:37 by imatouil          #+#    #+#             */
+/*   Updated: 2026/01/12 18:45:18 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
@@ -36,20 +35,20 @@ void	PhoneBook::DisplayTable()
 {
 	int	size;
 
-	std::cout << "--------------------------------------------------------\n";
-    std::cout << "|     Index|First Name| Last Name|  Nickname|  phonenbr|\n";
-    std::cout << "--------------------------------------------------------\n";
+    std::cout << "---------------------------------------------\n";
+    std::cout << "|     Index|First Name| Last Name|  Nickname|\n";
+    std::cout << "---------------------------------------------\n";
 	size = 8;
 	if (counter < 8)
-	size = counter;
+		size = counter;
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << "|" << std::setw(10) << i;
-		for (int j = 0; j < 4; j++)
+		for (int j = 0; j < 3; j++)
 		std::cout << "|" << std::setw(10) << TurnToDots(contacts[i].GetData(j));
 		std::cout << "|\n";
 	}
-	std::cout << "--------------------------------------------------------\n";
+    std::cout << "---------------------------------------------\n";
 }
 
 void	PhoneBook::Search()

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/16 11:14:56 by imatouil          #+#    #+#             */
+/*   Updated: 2025/12/16 13:17:10 by imatouil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <ctime>
 #include "Account.hpp"
@@ -103,8 +115,23 @@ void Account::displayAccountsInfos(void)
               << std::endl;
 }
 
-int Account::getNbAccounts(void) { return _nbAccounts; }
-int Account::getTotalAmount(void) { return _totalAmount; }
-int Account::getNbDeposits(void) { return _totalNbDeposits; }
-int Account::getNbWithdrawals(void) { return _totalNbWithdrawals; }
-int Account::checkAmount(void) const { return _amount; }
+int Account::getNbAccounts(void)
+{
+	return _nbAccounts;
+}
+int Account::getTotalAmount(void)
+{
+	return _totalAmount;
+}
+int Account::getNbDeposits(void)
+{
+	return _totalNbDeposits;
+}
+int Account::getNbWithdrawals(void)
+{
+	return _totalNbWithdrawals;
+}
+int Account::checkAmount(void) const
+{
+	return _amount;
+}

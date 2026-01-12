@@ -2,10 +2,10 @@
 #                                   CONFIG                                     #
 # **************************************************************************** #
 
-NAME        = phonebook
+NAME = phonebook
 
-CXX         = c++
-CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC         = main.cpp \
               PhoneBook.cpp \
@@ -20,10 +20,10 @@ OBJ         = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

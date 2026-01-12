@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 22:19:46 by codespace         #+#    #+#             */
-/*   Updated: 2025/11/30 13:18:04 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/12 19:05:17 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,14 @@ Contact::Contact()
 
 void	Contact::Helper(std::string &input) const
 {
-	if (!getline(std::cin, input))
-		exit(0);
+	while (true)
+	{
+		if (!std::getline(std::cin, input))
+			exit(0);
+		if (!input.empty())
+			return;
+		std::cout << "Field cannot be empty. Please try again: ";
+	}
 }
 
 void	Contact::SetData()
@@ -47,8 +53,6 @@ std::string	Contact::GetData(int index) const
 			return (lastname);
 		case 2:
 			return (nickname);
-		case 3:
-			return (phonenumber);
 		default:
 			return ("");
 	}
@@ -56,8 +60,9 @@ std::string	Contact::GetData(int index) const
 
 void	Contact::Display() const
 {
-	std::cout << "First Name  : " << firstname << std::endl;
-	std::cout << "Last Name   : " << lastname << std::endl;
-	std::cout << "Nick Name   : " << nickname << std::endl;
-	std::cout << "Phone Number: " << phonenumber << std::endl;
+	std::cout << "First Name     : " << firstname << std::endl;
+	std::cout << "Last Name      : " << lastname << std::endl;
+	std::cout << "Nick Name      : " << nickname << std::endl;
+	std::cout << "Phone Number   : " << phonenumber << std::endl;
+	std::cout << "Darckest Secret: " << darckestsecret << std::endl;
 }
