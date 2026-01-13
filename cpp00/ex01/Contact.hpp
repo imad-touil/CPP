@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 20:06:19 by codespace         #+#    #+#             */
-/*   Updated: 2026/01/08 13:45:47 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/13 14:25:41 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class   Contact
 		std::string	GetData(int index) const;
 		void		Display() const;
 		void		Helper(std::string &input) const;
+		bool		isOnlySpaces(const std::string &s) const;
 	private:
 		std::string firstname;
 		std::string lastname;

@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 22:19:46 by codespace         #+#    #+#             */
-/*   Updated: 2026/01/12 19:05:17 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/13 14:25:30 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,23 @@ Contact::Contact()
 	nickname(""), phonenumber(""),
 	darckestsecret("") {}
 
+bool	Contact::isOnlySpaces(const std::string &s) const
+{
+	for (size_t i = 0; i < s.length(); i++)
+	{
+		if (!isspace(s[i]))
+			return false;
+	}
+	return true;
+}
+
 void	Contact::Helper(std::string &input) const
 {
 	while (true)
 	{
 		if (!std::getline(std::cin, input))
 			exit(0);
-		if (!input.empty())
+		if (!input.empty() && !isOnlySpaces(input))
 			return;
 		std::cout << "Field cannot be empty. Please try again: ";
 	}
