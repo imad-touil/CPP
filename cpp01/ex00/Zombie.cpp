@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 20:12:47 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/14 17:08:56 by imatouil         ###   ########.fr       */
+/*   Created: 2026/01/14 11:36:27 by imatouil          #+#    #+#             */
+/*   Updated: 2026/01/14 15:21:30 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
-
-class	Zombie
+Zombie::Zombie(std::string name)
 {
-	private:
-		std::string	name;
-	
-	public:
-		Zombie(std::string name);
-		~Zombie();
-		void	announce(void);
+	this->name = name;
 };
 
+Zombie::~Zombie()
+{
+	std::cout << "Gmae Over For: " << name << std::endl;
+}
 
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
+void	Zombie::announce()
+{
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-# endif
+Zombie	*newZombie(std::string name)
+{
+	Zombie	*newZ;
+
+	newZ = new Zombie(name);
+	return (newZ);
+}
+
+void	randomChump(std::string name)
+{
+	Zombie	Z(name);
+	Z.announce();
+}

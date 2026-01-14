@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 11:13:44 by imatouil          #+#    #+#             */
-/*   Updated: 2025/12/16 11:13:49 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/14 10:20:13 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(int ac, char **av)
 	else
 	{
 		j = 0;
+		std::string j;
 		while (++j < ac)
 		{
 			i = -1;

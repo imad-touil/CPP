@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/13 20:12:47 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/14 17:08:56 by imatouil         ###   ########.fr       */
+/*   Created: 2026/01/14 14:34:55 by imatouil          #+#    #+#             */
+/*   Updated: 2026/01/14 17:11:24 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
+// void	ll()
+// {
+// 	system("leaks -q BraiiiiiiinnnzzzZ");
+// }
+// atexit(ll);
 
-class	Zombie
+int	main(void)
 {
-	private:
-		std::string	name;
-	
-	public:
-		Zombie(std::string name);
-		~Zombie();
-		void	announce(void);
-};
+	Zombie	*z1;
 
-
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
-
-# endif
+	std::cout << "[HEAP] Creating zombie...\n";
+	z1 = newZombie("Foo");
+	z1->announce();
+	delete(z1);
+	std::cout << "[HEAP] Destroying zombie...\n";
+	std::cout << "[STACK] Creating zombie...\n";
+	randomChump("Emad");
+	std::cout << "[STACK] Zombie destroyed automatically\n";
+}

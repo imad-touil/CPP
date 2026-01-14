@@ -5,7 +5,8 @@
 NAME = BraiiiiiiinnnzzzZ
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = 	
+SRCS = Zombie.cpp\
+		main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # **************************************************************************** #
@@ -15,10 +16,10 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp Zombie.hpp
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 clean:
