@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 11:36:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/14 15:21:30 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/15 13:12:54 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Zombie	*newZombie(std::string name)
 	}
 	catch (const std::bad_alloc &e)
 	{
-		std::corr << "Allocation failed\n"l
+		std::cerr << "Allocation failed\n";
 		return (0);
 	}
 	return (newZ);

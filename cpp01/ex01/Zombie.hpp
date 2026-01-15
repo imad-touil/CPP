@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 20:12:47 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/14 17:44:29 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/15 14:26:21 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ class	Zombie
 		void	setName(std::string name);
 };
 
-
 Zombie	*newZombie(std::string name);
-Zombie* zombieHorde( int N, std::string name );
+Zombie*	zombieHorde( int N, std::string name );
 void	randomChump(std::string name);
 
 # endif
