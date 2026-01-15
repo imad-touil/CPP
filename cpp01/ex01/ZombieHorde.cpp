@@ -14,8 +14,20 @@
 
 Zombie*	zombieHorde( int N, std::string name )
 {
-	Zombie	*z = new Zombie[N];
+	Zombie	*z;
 
+	z = new (std::nothrow) Zombie[N];
+	if (!z)
+	{
+		std::cerr << "Allocation Failed\n";
+		return (0);
+	}
 	for (int i = 0; i < N; i++)
-	
+		z[i].setName(name);
+	return (z);
+}
+
+void	Zombie::setName(std::name name)
+{
+	this->name = name;
 }

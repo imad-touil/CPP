@@ -31,7 +31,15 @@ Zombie	*newZombie(std::string name)
 {
 	Zombie	*newZ;
 
-	newZ = new Zombie(name);
+	try
+	{
+		newZ = new Zombie(name);
+	}
+	catch (const std::bad_alloc &e)
+	{
+		std::corr << "Allocation failed\n"l
+		return (0);
+	}
 	return (newZ);
 }
 

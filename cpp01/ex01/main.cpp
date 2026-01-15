@@ -20,14 +20,16 @@
 
 int	main(void)
 {
-	Zombie	*z1;
+	// Zombie	*z1;
 
-	std::cout << "[HEAP] Creating zombie...\n";
-	z1 = newZombie("Foo");
-	z1->announce();
-	delete(z1);
-	std::cout << "[HEAP] Destroying zombie...\n";
-	std::cout << "[STACK] Creating zombie...\n";
-	randomChump("Emad");
-	std::cout << "[STACK] Zombie destroyed automatically\n";
+	// std::cout << "[HEAP] Creating zombie...\n";
+	// z1 = newZombie("Foo");
+	// z1->announce();
+	// delete(z1);
+	// std::cout << "[HEAP] Destroying zombie...\n";
+	// std::cout << "[STACK] Creating zombie...\n";
+	// randomChump("Emad");
+	// std::cout << "[STACK] Zombie destroyed automatically\n";
+	char	names[4] = {"Imad", "EmaD", "Toto", "Foo"};
+	for()
 }
