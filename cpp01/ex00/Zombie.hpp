@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 20:12:47 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/14 17:08:56 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/20 11:38:59 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
+
+# define RED "\e[31m"
+# define RESET "\e[0m"
 
 class	Zombie
 {
