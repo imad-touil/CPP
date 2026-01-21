@@ -5,26 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 15:31:15 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/21 13:25:15 by imatouil         ###   ########.fr       */
+/*   Created: 2026/01/21 22:20:37 by imatouil          #+#    #+#             */
+/*   Updated: 2026/01/21 22:53:23 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int	main(void)
+int	main(int ac, char **av)
 {
-	std::string	str = "HI THIS IS BRAIN";
-	std::string	*stringPTR = &str;
-	std::string	&stringREF = str;
-
-	std::cout << "Memory" << std::endl;
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	std::cout << "Values" << std::endl;
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
+	if (ac != 4)
+	{
+		std::cerr << "Usage: " << av[0] << " <filename> <s1> <s2>" << std::endl;
+        return (1);
+	}
 }

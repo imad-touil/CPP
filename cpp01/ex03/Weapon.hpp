@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 15:31:15 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/21 13:25:15 by imatouil         ###   ########.fr       */
+/*   Created: 2026/01/21 13:32:49 by imatouil          #+#    #+#             */
+/*   Updated: 2026/01/21 18:20:30 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+
 #include <iostream>
 
-int	main(void)
+class	Weapon
 {
-	std::string	str = "HI THIS IS BRAIN";
-	std::string	*stringPTR = &str;
-	std::string	&stringREF = str;
+	public:
+		Weapon(std::string type);
+		~Weapon();
+		void				setType(std::string newType);
+		const std::string&	getType() const;
+	private:
+		std::string	type;
+};
 
-	std::cout << "Memory" << std::endl;
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	std::cout << "Values" << std::endl;
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-}
+#endif

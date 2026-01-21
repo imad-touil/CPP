@@ -2,13 +2,10 @@
 #                                   CONFIG                                     #
 # **************************************************************************** #
 
-NAME = UnnecessaryViolence
+NAME = Sedisforlosers
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = main.cpp\
-	HumanA.cpp\
-	HumanB.cpp\
-	Weapon.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
