@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 20:12:47 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/20 11:38:59 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:43:20 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 
-# define RED "\e[31m"
+# define RED "\033[31m"
 # define RESET "\e[0m"
 
 class	Zombie

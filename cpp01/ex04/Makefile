@@ -5,11 +5,10 @@
 NAME = Sedisforlosers
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = main.cpp
+SRCS = main.cpp\
+		Sed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
-
-INCLUDES = Weapon.hpp HumanA.hpp HumanB.hpp
 
 # **************************************************************************** #
 #                                   RULES                                      #
@@ -20,7 +19,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp $(INCLUDES)
+%.o: %.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
