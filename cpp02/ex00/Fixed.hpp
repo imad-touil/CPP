@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:36:30 by imatouil          #+#    #+#             */
-/*   Updated: 2026/01/28 15:05:48 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/01/28 16:43:04 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Fixed
 	public:
 		Fixed();
 		Fixed(const Fixed& obj);
-		Fixed&	operator=(const Fixed& obj)
+		Fixed&	operator=(const Fixed& obj);
 		~Fixed();
 		int		getRawBits(void) const;
-		void	steRawBits(int const raw);
+		void	setRawBits(int const raw);
 
 	private:
 		int					value;
