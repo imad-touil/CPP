@@ -19,7 +19,8 @@ class Fixed
 {
 	public:
 		Fixed();
-		Fixed(const Fixed &obj);
+		Fixed(const Fixed& obj);
+		Fixed&	operator=(const Fixed& obj)
 		~Fixed();
 		int		getRawBits(void) const;
 		void	steRawBits(int const raw);
