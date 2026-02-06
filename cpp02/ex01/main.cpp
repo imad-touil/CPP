@@ -6,13 +6,14 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 16:45:19 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/03 19:11:37 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/06 14:27:10 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void ) {
+int main( void )
+{
 	Fixed a;
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
