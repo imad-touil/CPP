@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:36:30 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/06 15:29:01 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/14 21:59:59 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,47 @@ class Fixed
 	public:
 		Fixed();
 		// **************************************************
+		
 		Fixed(const int intValue);
 		Fixed(const float floatValue);
 		// **************************************************
+		
 		Fixed(const Fixed& obj);
 		Fixed&	operator=(const Fixed& obj);
 		~Fixed();
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 		// **************************************************
+		
 		float	toFloat(void) const;
 		int		toInt(void) const;
-
 		// **************************************************
-		// static int&	min(int &first, int &secend);
-		// static int&	min(const int &first, const int &secend);
-		// static int&	max(int &first, int &secend);
-		// static int&	max(const int &first, const int &secend);
+		
+		bool	operator>(const Fixed& obj) const;
+		bool	operator<(const Fixed& obj) const;
+		bool	operator>=(const Fixed& obj) const;
+		bool	operator<=(const Fixed& obj) const;
+		bool	operator==(const Fixed& obj) const;
+		bool	operator!=(const Fixed& obj) const;
+		// **************************************************
+
+		Fixed	operator+(const Fixed &obj) const;
+		Fixed	operator-(const Fixed &obj) const;
+		Fixed	operator*(const Fixed &obj) const;
+		Fixed	operator/(const Fixed &obj) const;
+		// **************************************************
+		
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
+		// **************************************************
+	
+		static Fixed	&min(Fixed &first, Fixed &second);
+		static Fixed	&max(Fixed &first, Fixed &second);
+		static const Fixed&	min(const Fixed &first, const Fixed &second);
+		static const Fixed&	max(const Fixed &first, const Fixed &second);
+		// **************************************************
 	private:
 		int					value;
 		static const int	bits = 8;
