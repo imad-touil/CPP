@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 20:05:21 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/23 17:55:05 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/24 15:44:36 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ClapTrap
 	private:
 		std::string		_name;
 		unsigned int	_hitPoints;
-		unsigned int	_energyPoint;
+		unsigned int	_energyPoints;
 		unsigned int	_attackDamage;
 	public:
 		ClapTrap();

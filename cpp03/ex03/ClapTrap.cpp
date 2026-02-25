@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 01:12:57 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/24 15:44:36 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/24 16:35:25 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ ClapTrap::ClapTrap(std::string name) :
 	_energyPoints(10),
 	_attackDamage(0)
 {
-	std::cout << "ClapTrap " << this->_name << " Constructor called\n";
+	std::cout	<< "ClapTrap " << this->_name
+				<< " Constructor called\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap& obj)

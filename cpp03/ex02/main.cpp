@@ -6,37 +6,35 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 17:26:57 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/24 19:02:56 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/25 02:53:50 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
     std::cout << "|----- Default Construction -----|" << std::endl;
-    ScavTrap a;
+    FragTrap a;
 
     std::cout << "\n|----- Name Construction -----|" << std::endl;
-    ScavTrap b("Guardian");
+    FragTrap b("Guardian");
 
     std::cout << "\n|----- Attack Test -----|" << std::endl;
     b.attack("Enemy");
 
     std::cout << "\n|----- Guard Gate Mode -----|" << std::endl;
-    b.guardGate();
+    b.highFivesGuys();
 
     std::cout << "\n|----- Copy Constructor Test -----|" << std::endl;
-    ScavTrap c(b);
+    FragTrap c(b);
 
     std::cout << "\n|----- Assignment Operator Test -----|" << std::endl;
-    ScavTrap d;
+    FragTrap d;
     d = b;
 
     std::cout << "\n----- Destruction Order Test -----" << std::endl;
 
-	ClapTrap *test = new ScavTrap();
-	delete test;
     return 0;
 }
