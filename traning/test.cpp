@@ -1,11 +1,26 @@
 #include <iostream>
+using namespace std;
 
-int	main(void)
+class Animal
 {
-	{
-		std::cout << "Hello Funny World01\n";
-	}
-	{
-		std::cout << "Hello Funny World02\n";
-	}
+public:
+    virtual void makeSound()
+    {
+        std::cout << "Animal sound\n";
+    }
+};
+
+class Dog : public Animal
+{
+public:
+    void makeSound()
+    {
+        std::cout << "Woof\n";
+    }
+};
+
+int main(void)
+{
+  Animal* a = new Dog();
+  a->makeSound();
 }

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 19:48:40 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/27 12:13:35 by imatouil         ###   ########.fr       */
+/*   Created: 2026/03/02 02:34:57 by imatouil          #+#    #+#             */
+/*   Updated: 2026/03/02 20:05:13 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "Animal.hpp"
 
-class	DiamondTrap : public ScavTrap, public FragTrap
+class Dog : public Animal
 {
-	private:
-		std::string	_name;
 	public:
-		DiamondTrap();
-		DiamondTrap(std::string name);
-		DiamondTrap(const DiamondTrap& obj);
-		DiamondTrap&	operator=(const DiamondTrap& obj);
-		~DiamondTrap();
-		void	attack(const std::string& target);
-		void	whoAmI();
+		Dog();
+		Dog(const Dog& obj);
+		Dog&	operator=(const Dog& obj);
+		~Dog();
+
+		void	makeSound();
 };
 
 #endif

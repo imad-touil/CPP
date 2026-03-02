@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/24 19:48:40 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/27 12:13:35 by imatouil         ###   ########.fr       */
+/*   Created: 2026/03/02 02:21:28 by imatouil          #+#    #+#             */
+/*   Updated: 2026/03/02 20:33:09 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#ifndef	ANIMAL_HPP
+#define ANIMAL_HPP
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#define print(name)  std::cout << name << std::endl;
 
-class	DiamondTrap : public ScavTrap, public FragTrap
+#include <iostream>
+
+class Animal
 {
-	private:
-		std::string	_name;
+	protected:
+		std::string	type;
 	public:
-		DiamondTrap();
-		DiamondTrap(std::string name);
-		DiamondTrap(const DiamondTrap& obj);
-		DiamondTrap&	operator=(const DiamondTrap& obj);
-		~DiamondTrap();
-		void	attack(const std::string& target);
-		void	whoAmI();
+		Animal();
+		Animal(const Animal& obj);
+		Animal&	operator=(const Animal& obj);
+		~Animal();
+		
+		virtual void	makeSound() const;
+		std::string		getType() const;
 };
 
 #endif

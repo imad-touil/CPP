@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 19:48:37 by imatouil          #+#    #+#             */
-/*   Updated: 2026/02/25 02:41:47 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/02/27 14:35:50 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,39 @@ DiamondTrap::DiamondTrap(std::string name)
 				<< " constructor called" << std::endl;
 }
 
+DiamondTrap::DiamondTrap(const DiamondTrap& obj)
+			: ClapTrap(obj),
+			ScavTrap(obj),
+			FragTrap(obj),
+			_name(obj._name)
+{
+	std::cout	<< "DiamondTrap copy constructor called" << std::endl;
+}
+
+DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& obj)
+{
+	std::cout	<< "DiamondTrap assignment operator called\n";
+	if (this != &obj)
+	{
+		ClapTrap::operator=(obj);
+		this->_name = obj._name;
+	}
+	return (*this);
+}
+
 DiamondTrap::~DiamondTrap()
 {
 	std::cout	<< "DiamondTrap " << this->_name
 				<< " destructor called" << std::endl;
 }
 
-// DiamondTrap::DiamondTrap(std::string name)
+void	DiamondTrap::attack(const std::string& target)
+{
+	ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI()
+{
+	std::cout	<< "DiamondTrap name: " << this->_name << std::endl;
+	std::cout	<< "ClapTrap name: " << ClapTrap::_name << std::endl;
+}
