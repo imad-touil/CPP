@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 01:34:18 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/03 01:35:03 by imatouil         ###   ########.fr       */
+/*   Created: 2026/03/03 02:30:44 by imatouil          #+#    #+#             */
+/*   Updated: 2026/03/03 02:39:58 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog()
+WrongCat::WrongCat()
 {
-	type  ="Dog";
-	print("Dog Default Constructor Called");
+	type  ="WrongCat";
+	print("WrongCat Default Constructor Called");
 }
 
-Dog::Dog(const Dog& obj) : Animal(obj)
+WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 {
-	print("Dog Copy Constructor Called");
+	print("WrongCat Copy Constructor Called");
 }
 
-Dog&	Dog::operator=(const Dog& obj)
+WrongCat&	WrongCat::operator=(const WrongCat& obj)
 {
 	if (this != &obj)
-		Animal::operator=(obj);
-	print("Dog Copy Assignement Operator Called");
+		WrongAnimal::operator=(obj);
+	print("WrongCat Copy Assignement Operator Called");
 	return (*this);
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	print("Dog Destructor Called");
+	print("WrongCat Destructor Called");
 }
 
-void	Dog::makeSound() const
+void	WrongCat::makeSound() const
 {
-	print("Woof woof!");
+	print("Meow meow!");
 }

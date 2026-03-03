@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 02:21:25 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/02 20:33:21 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/03 01:35:24 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Animal&	Animal::operator=(const Animal& obj)
 	if (this != &obj)
 		this->type = obj.type;
 	print("Animal Copy Assignment Operator Called");
+	return (*this);
 }
 
 Animal::~Animal()

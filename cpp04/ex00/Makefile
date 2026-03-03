@@ -5,9 +5,19 @@
 NAME = program
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = main.cpp
+SRCS = main.cpp\
+		Animal.cpp\
+		Cat.cpp\
+		Dog.cpp\
+		WrongAnimal.cpp\
+		WrongCat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
+HEADERS = Animal.hpp\
+		Cat.hpp\
+		Dog.hpp\
+		WrongAnimal.hpp\
+		WrongCat.hpp
 
 # **************************************************************************** #
 #                                   RULES                                      #

@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 02:48:17 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/02 20:05:06 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/03 02:43:15 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cat : public Animal
 		Cat&	operator=(const Cat& obj);
 		~Cat();
 
-		void	makeSound();
+		void	makeSound() const;
 };
 
 #endif
