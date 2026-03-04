@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 02:48:14 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/03 22:03:28 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/04 02:00:58 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ Cat&	Cat::operator=(const Cat& obj)
 
 Cat::~Cat()
 {
-	print("Cat Destructor Called");
 	delete brain;
+	print("Cat Destructor Called");
 }
 
 void	Cat::makeSound() const

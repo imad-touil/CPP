@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 16:05:40 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/03 23:49:08 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/04 02:15:04 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,18 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
-	// ...
+	print("-----------| Array Of Animals Test |-----------");
+	const int size = 4;
+	Animal*	animals[size];
+	for (int i = 0; i < size; i++)
+	{
+		if (i < size / 2)
+			animals[i] = new Cat();
+		else
+			animals[i] = new Dog();
+	}
+	for (int i = 0; i < size; i++)
+		delete animals[i];
 	return 0;
 }
 
