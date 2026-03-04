@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 16:05:40 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/03 02:52:28 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/03 13:19:40 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,23 +44,25 @@
 
 int main()
 {
-	// const Animal* meta = new Animal();
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-	// std::cout << j->getType() << " " << std::endl;
-	// std::cout << i->getType() << " " << std::endl;
-	// i->makeSound(); //will output the cat sound!
-	// j->makeSound();
-	// meta->makeSound();
-
-	const WrongAnimal* meta = new WrongAnimal();
+	print("-----------| Animal |-----------\n");
+	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
-	const WrongAnimal* i = new WrongCat();
+	const Animal* i = new Cat();
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+
+	print("-----------| WrongAnimal |-----------\n");
+	const WrongAnimal* meta1 = new WrongAnimal();
+	const Animal* j1 = new Dog();
+	const WrongAnimal* i1 = new WrongCat();
+	std::cout << j1->getType() << " " << std::endl;
+	std::cout << i1->getType() << " " << std::endl;
+	i1->makeSound();
+	j1->makeSound();
+	meta1->makeSound();
 	
 	return 0;
 }
