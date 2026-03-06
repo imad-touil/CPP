@@ -6,15 +6,21 @@ NAME = program
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp\
-	AMateria.cpp\
-	Ice.cpp\
-	Cure.cpp\
+		AMateria.cpp\
+		Ice.cpp\
+		Cure.cpp\
+		Character.cpp\
+		MateriaSource.cpp
 
 
 OBJS = $(SRCS:.cpp=.o)
 HEADERS = AMateria.hpp\
 		Ice.hpp\
-		Cure,hpp
+		Cure,hpp\
+		Character.hpp\
+		ICharacter.hpp\
+		MateriaSource.hpp\
+		IMateriaSource.hpp
 		
 
 # **************************************************************************** #

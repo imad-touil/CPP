@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 02:50:38 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/06 01:37:35 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/06 02:32:15 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define AMATERIA_HPP
 
 #include <iostream>
+
+class ICharacter;
 
 class AMateria
 {

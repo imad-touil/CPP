@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 01:41:40 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/06 01:43:29 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/06 01:46:15 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define IMATERIASOURCE_HPP
 
 # include <iostream>
+# include "AMateria.hpp"
 
 class IMateriaSource
 {

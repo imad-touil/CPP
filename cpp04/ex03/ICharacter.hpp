@@ -6,15 +6,16 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 21:26:49 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/05 21:28:59 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/06 02:37:00 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 # define ICHARACTER_HPP
 
-#include "Character.hpp"
-#include "AMateria.hpp"
+#include <iostream>
+
+class AMateria;
 
 class ICharacter
 {
