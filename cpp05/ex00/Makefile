@@ -6,7 +6,7 @@ NAME = program
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp\
-		Fixed.cpp
+		Bureaucrat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -19,7 +19,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Fixed.hpp
+%.o: %.cpp Bureaucrat.hpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 

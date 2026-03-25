@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 02:46:08 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/25 21:21:29 by imatouil         ###   ########.fr       */
+/*   Created: 2026/03/25 14:22:05 by imatouil          #+#    #+#             */
+/*   Updated: 2026/03/25 14:23:20 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
-
 #include <iostream>
 
-class Bureaucrat
+int	main(void)
 {
-	private:
-		const std::string	name;
-		int					grade;
-	public:
-		Bureaucrat();
-		Bureaucrat(const Bureaucrat& obj);
-		Bureaucrat&	operator=(const Bureaucrat& obj);
-		~Bureaucrat();
-
-		const std::string	getName() const;
-		int					getGrade() const;
-		void				increment();
-		void				decrement();
-};
-
-#endif
+	std::cout << "Hello CPP World\n";
+}
