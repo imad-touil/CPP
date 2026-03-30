@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:01:50 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/30 14:37:48 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:10:35 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include <exception>
 
-# include "Bureaucrat.hpp"
+class Bureaucrat;
 
 class Form
 {
@@ -34,7 +34,7 @@ class Form
 		~Form();
 
 		// Getters
-		const std::string	getName() const;
+		const std::string&	getName() const;
 		bool				getIsSigned() const;
 		int					getGradeToSign() const;
 		int					getGradeToExecute() const;

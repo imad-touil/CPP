@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 02:46:08 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/26 20:52:35 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:09:42 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <exception>
+
+class Form;
 
 class Bureaucrat
 {
@@ -29,11 +31,12 @@ class Bureaucrat
 		Bureaucrat&	operator=(const Bureaucrat& obj);
 		~Bureaucrat();
 		// getters
-		const std::string	getName() const;
+		const std::string&	getName() const;
 		int					getGrade() const;
-		// two member functions...
+		//member functions...
 		void				increment();
 		void				decrement();
+		void				signForm(Form &obj);
 		// exception
 		class GradeTooHighException : public std::exception
 		{

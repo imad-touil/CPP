@@ -6,10 +6,11 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:01:45 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/30 16:24:56 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 18:35:07 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 // OCF
@@ -47,7 +48,7 @@ Form&	Form::operator=(const Form& obj)
 Form::~Form() {}
 
 // Getters
-const std::string	Form::getName() const
+const std::string&	Form::getName() const
 {
 	return (this->name);
 }
@@ -85,7 +86,6 @@ const char*	Form::GradeTooLowException::what() const throw()
 	return ("Form Grade Too Low!");
 }
 
-
 // <<
 std::ostream&	operator<<(std::ostream& out, const Form& obj)
 {
@@ -95,4 +95,3 @@ std::ostream&	operator<<(std::ostream& out, const Form& obj)
 		<< "Grade To Execute " << obj.getGradeToExecute() << std::endl;
 	return (out);
 }
-
