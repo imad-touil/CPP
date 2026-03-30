@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:01:45 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/30 18:35:07 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 20:39:39 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ std::ostream&	operator<<(std::ostream& out, const Form& obj)
 {
 	out	<< "Form Name: " << obj.getName() << std::endl
 		<< "Signed: " << (obj.getIsSigned() ? "Yes" : "No") << std::endl
-		<< "Grade To Sign " << obj.getGradeToSign() << std::endl
-		<< "Grade To Execute " << obj.getGradeToExecute() << std::endl;
+		<< "Grade To Sign: " << obj.getGradeToSign() << std::endl
+		<< "Grade To Execute: " << obj.getGradeToExecute() << std::endl;
 	return (out);
 }
