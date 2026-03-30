@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:01:50 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/27 10:58:06 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 14:37:48 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ class Form
 		int					getGradeToExecute() const;
 
 		// member functions...
-		
-		
+		void				beSigned(const Bureaucrat& obj);
+
 		// exception
 		class GradeTooHighException : public std::exception
 		{

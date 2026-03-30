@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 14:22:05 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/27 13:11:18 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 14:28:16 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	std::cout << "\n|---------- 👍 ----------|" << std::endl;
 	try
 	{
-		Form	f("Emad", 0, -13);
+		Form	f("Emad", 10, 13);
 		std::cout << f;
 	}
 	catch (std::exception &e)

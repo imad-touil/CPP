@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 13:01:45 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/27 13:07:23 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/30 16:24:56 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,14 @@ int	Form::getGradeToExecute() const
 	return (this->gradeToExecute);
 }
 
+void	Form::beSigned(const Bureaucrat& obj)
+{
+	if (obj.getGrade() > this->getGradeToSign())
+		throw Form::GradeTooLowException();
+	this->isSigned = true;
+}
+
+// exception
 const char*	Form::GradeTooHighException::what() const throw()
 {
 	return ("Form Grade Too High!");
@@ -87,3 +95,4 @@ std::ostream&	operator<<(std::ostream& out, const Form& obj)
 		<< "Grade To Execute " << obj.getGradeToExecute() << std::endl;
 	return (out);
 }
+
