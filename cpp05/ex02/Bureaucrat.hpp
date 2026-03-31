@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 02:46:08 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/31 10:39:43 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/31 14:38:44 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat
 		void				increment();
 		void				decrement();
 		void				signAForm(AForm &obj);
+		void				executeForm(AForm const & form) const;
 		// exception
 		class GradeTooHighException : public std::exception
 		{
