@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/30 18:14:59 by imatouil          #+#    #+#             */
-/*   Updated: 2026/03/31 18:51:39 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/03/31 23:56:32 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,76 +28,56 @@ int main()
 {
     srand(time(NULL));
 
-    std::cout << "========== BASIC TEST ==========\n";
+    std::cout << BLUE << "|---------- Home ----------|\n" << RESET;
     {
+		std::cout << GREEN;
         Bureaucrat boss("Boss", 1);
-
-        ShrubberyCreationForm shrub("home");
-        RobotomyRequestForm robot("Bender");
-        PresidentialPardonForm pardon("Arthur");
-
+        ShrubberyCreationForm shrub("Home");
         boss.signAForm(shrub);
+        boss.executeForm(shrub);
+		// ------------------------------
+		std::cout << RED;
+        Bureaucrat junior("AlmostBoss", 138);
+        ShrubberyCreationForm sh("Town");
+        junior.executeForm(sh);
+        junior.signAForm(sh);
+        junior.executeForm(sh);
+		std::cout << RESET;
+    }
+
+    std::cout << BLUE << "|---------- Apollo ----------|\n" << RESET;
+    {
+		std::cout << GREEN;
+        Bureaucrat boss("Boss", 1);
+        RobotomyRequestForm robot("Apollo");
         boss.signAForm(robot);
+		for (int i = 0; i < 4; i++)
+        	boss.executeForm(robot);
+		// ------------------------------
+		std::cout << RED;
+        Bureaucrat fake("AlmostBoss", 46);
+        RobotomyRequestForm fakerobot("Tesla");
+        fake.executeForm(fakerobot);
+        fake.signAForm(fakerobot);
+        fake.executeForm(fakerobot);
+		std::cout << RESET;
+    }
+
+    std::cout << BLUE << "|---------- Hero ----------|\n" << RESET;
+    {
+		std::cout << GREEN;
+        Bureaucrat boss("Boss", 1);
+        PresidentialPardonForm pardon("Hero");
         boss.signAForm(pardon);
-
-        boss.executeForm(shrub);
-        boss.executeForm(robot);
-        boss.executeForm(pardon);
+		boss.executeForm(pardon);
+		// ------------------------------
+		std::cout << RED;
+        Bureaucrat fake("AlmostBoss", 7);
+        PresidentialPardonForm pp("Criminal");
+        fake.executeForm(pp);
+        fake.signAForm(pp);
+        fake.executeForm(pp);
+		std::cout << RESET;
     }
-
-    std::cout << "\n========== NOT SIGNED TEST ==========\n";
-    {
-        Bureaucrat boss("Boss", 1);
-        ShrubberyCreationForm shrub("garden");
-
-        // try execute without signing
-        boss.executeForm(shrub);
-    }
-
-    std::cout << "\n========== LOW GRADE TEST ==========\n";
-    {
-        Bureaucrat low("Low", 150);
-        ShrubberyCreationForm shrub("park");
-
-        low.signAForm(shrub);      // should fail
-        low.executeForm(shrub);    // should fail
-    }
-
-    std::cout << "\n========== MIXED TEST ==========\n";
-    {
-        Bureaucrat mid("Mid", 100);
-        Bureaucrat high("High", 1);
-
-        RobotomyRequestForm robot("Marvin");
-
-        mid.signAForm(robot);   // maybe fail (grade too low)
-        high.signAForm(robot);  // should succeed
-
-        mid.executeForm(robot);   // should fail
-        high.executeForm(robot);  // should work
-    }
-
-    std::cout << "\n========== RANDOM TEST (Robotomy) ==========\n";
-    {
-        Bureaucrat boss("Boss", 1);
-        RobotomyRequestForm robot("C3PO");
-
-        boss.signAForm(robot);
-
-        for (int i = 0; i < 5; i++)
-        {
-            boss.executeForm(robot);
-        }
-    }
-
-    std::cout << "\n========== PRESIDENT TEST ==========\n";
-    {
-        Bureaucrat president("President", 1);
-        PresidentialPardonForm pardon("Ford");
-
-        president.signAForm(pardon);
-        president.executeForm(pardon);
-    }
-
     return 0;
 }
