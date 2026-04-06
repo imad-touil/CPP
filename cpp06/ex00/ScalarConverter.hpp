@@ -16,17 +16,28 @@
 #include <iostream>
 #include <string>
 
+
 class ScalarConverter
 {
 	private:
-		// OCF
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter& obj);
-		ScalarConverter&	operator=(const ScalarConverter& obj);
-		~ScalarConverter();
-		// Member Method
+	// OCF
+	ScalarConverter();
+	ScalarConverter(const ScalarConverter& obj);
+	ScalarConverter&	operator=(const ScalarConverter& obj);
+	~ScalarConverter();
+	// Member Method
 	public:
+		enum e_type
+		{
+			CHAR,
+			INT,
+			FLOAT,
+			DOUBLE,
+			PSEUDO,
+			INVALID
+		};
 		static void	convert(const std::string& literal);
-};
+		static void	detectType(const std::string& literal);
+	};
 
 #endif

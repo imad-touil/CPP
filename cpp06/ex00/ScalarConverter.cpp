@@ -20,8 +20,39 @@ ScalarConverter&	ScalarConverter::operator=(const ScalarConverter& obj) { (void)
 
 ScalarConverter::~ScalarConverter() {}
 
+void	ScalarConverter::detectType(const std::string&literal)
+{
+	if (literal == "nan" || literal == "nanf"
+		|| literal == "-inf" || literal == "+inf"
+		|| literal == "-inff" || literal == "+inff")
+		return (PSEUDO);
+	else if (literal.length() == 1 && !isdigit(literal[0]))
+		return (CHAR);
+	try
+	{
+		std::stoi(literal);
+		return (INT);
+	}
+	catch (...) {}
+	if (literal[literal.length() - 1] == 'f')
+	{
+		try
+			{
+				std::stof(literal);
+				return (FLOAT);
+			}
+		catch (...) {}
+	}
+	try
+	{
+		std::stod(literal);
+		return (DOUBLE);
+	}
+	catch (...) {}
+	return (INVALID);
+}
+
 void	ScalarConverter::convert(const std::string& literal)
 {
-	std::cout << static_cast<int>(literal[0])<<std::endl;
-	std::cout << static_cast<double>(literal[0])<<std::endl;
+	
 }

@@ -14,9 +14,13 @@
 #include <string>
 #include "ScalarConverter.hpp"
 
+# define RED "\e[31m"
+# define RESET "\e[0m"
+
 int	main(int ac, char **av)
 {
 	if (ac != 2)
-		return (std::cout << "KYS\n", 1);
+		return (std::cout << RED << "Usage: ./convert <literal>\n", 1);
 	ScalarConverter::convert(av[1]);
+	return (0);
 }
