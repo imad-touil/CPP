@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/03 16:44:18 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/07 17:49:29 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/07 22:04:00 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ void	handelInt(const std::string& literal)
 		std::cout << "int: impossible\n";
 	else
 		std::cout << "int: " << static_cast<int>(val) << "\n";
-	std::cout << "float: " << static_cast<float>(val) << ".0f\n";
-	std::cout << "double: " << static_cast<double>(val) << ".0\n";
+	std::cout	<< std::fixed << std::setprecision(1) << "float: "
+				<< static_cast<float>(val) << "f\n";
+	std::cout	<< std::fixed << std::setprecision(1) << "double: "
+				<< static_cast<double>(val) << "\n";
 }
 
 void	handelFloat(const std::string& literal)
@@ -66,10 +68,12 @@ void	handelFloat(const std::string& literal)
 		std::cout << "int: impossible\n";
 	else
 		std::cout << "int: " << static_cast<int>(d) << "\n";
-	std::cout << "float: " << static_cast<float>(d);
-	if (d == (int)d)
-		std::cout << ".0";
-	std::cout << "f\n";
+	int len = 0;
+	int i = literal.length() - 1;
+	while (literal[--i] != '.')
+		len++;
+	std::cout	<< std::fixed << std::setprecision(len) << "float: "
+				<< static_cast<float>(d) << "f\n";
 	std::cout << "double: " << d;
 	if (d == (int)d)
 		std::cout << ".0";

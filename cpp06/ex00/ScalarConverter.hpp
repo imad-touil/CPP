@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 18:47:22 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/07 17:09:48 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/07 19:48:26 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <sstream>
 #include <limits>
+#include <iomanip>
 
 enum e_type
 {
