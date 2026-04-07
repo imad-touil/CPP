@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 18:47:22 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/03 19:49:04 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/07 11:32:40 by emad             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@
 #include <iostream>
 #include <string>
 
+enum e_type
+{
+	CHAR,
+	INT,
+	FLOAT,
+	DOUBLE,
+	PSEUDO,
+	INVALID
+};
 
 class ScalarConverter
 {
@@ -27,17 +36,14 @@ class ScalarConverter
 	~ScalarConverter();
 	// Member Method
 	public:
-		enum e_type
-		{
-			CHAR,
-			INT,
-			FLOAT,
-			DOUBLE,
-			PSEUDO,
-			INVALID
-		};
-		static void	convert(const std::string& literal);
-		static void	detectType(const std::string& literal);
+		static void		convert(const std::string& literal);
 	};
+	e_type	detectType(const std::string& literal);
+	int		isPseudo(const std::string& literal);
+	int		isChar(const std::string& literal);
+	int		isInt(const std::string& literal);
+	int		isDouble(const std::string& literal);
+	int		isFloat(const std::string& literal);
+	
 
 #endif
