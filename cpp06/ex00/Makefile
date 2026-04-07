@@ -7,7 +7,8 @@ CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp\
 	ScalarConverter.cpp\
-	detectType.cpp
+	detectType.cpp\
+	handelType.cpp
 
 HEADERS = ScalarConverter.hpp
 

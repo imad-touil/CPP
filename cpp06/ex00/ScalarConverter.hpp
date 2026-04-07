@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 18:47:22 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/07 19:48:26 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/07 22:42:13 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ class ScalarConverter
 		static void		convert(const std::string& literal);
 	};
 
+	// Detect type
 	e_type	detectType(const std::string& literal);
 	int		isPseudo(const std::string& literal);
 	int		isChar(const std::string& literal);
@@ -49,5 +50,11 @@ class ScalarConverter
 	int		isDouble(const std::string& literal);
 	int		isFloat(const std::string& literal);
 	
+	// Handel type
+	void	handelInt(const std::string& literal);
+	void	handelFloat(const std::string& literal);
+	void	handelDouble(const std::string& literal);
+	void	handelPseudo(const std::string& literal);
+	void	handelInvalid(const std::string& literal);
 
 #endif

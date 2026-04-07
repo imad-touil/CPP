@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 11:28:06 by emad              #+#    #+#             */
-/*   Updated: 2026/04/07 16:06:16 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/07 22:12:24 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ e_type	detectType(const std::string& literal)
 		return (INT);
 	if (isFloat(literal))
 		return (FLOAT);
-	if (isDouble(literal)) // more test for that
+	if (isDouble(literal))
 		return (DOUBLE);
 	return (INVALID);
 }
