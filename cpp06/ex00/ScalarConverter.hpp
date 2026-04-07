@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 18:47:22 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/07 11:32:40 by emad             ###   ########.fr       */
+/*   Updated: 2026/04/07 17:09:48 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <limits>
 
 enum e_type
 {
 	CHAR,
 	INT,
-	FLOAT,
 	DOUBLE,
+	FLOAT,
 	PSEUDO,
 	INVALID
 };
@@ -38,6 +40,7 @@ class ScalarConverter
 	public:
 		static void		convert(const std::string& literal);
 	};
+
 	e_type	detectType(const std::string& literal);
 	int		isPseudo(const std::string& literal);
 	int		isChar(const std::string& literal);
