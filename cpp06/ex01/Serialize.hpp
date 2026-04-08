@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serialize.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 11:14:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/08 13:16:43 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/08 20:33:57 by emad             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
-#include <limits>
-#include <iomanip>
+#include <stdint.h>
+
+#include "Data.hpp"
+
 
 class Serialize
 {
@@ -29,6 +30,7 @@ class Serialize
 		~Serialize();
 	public:
 		static uintptr_t	serialize(Data* ptr);
+		Data*				deserialize(uintptr_t raw);
 };
 
 #endif

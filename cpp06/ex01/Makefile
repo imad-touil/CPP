@@ -6,9 +6,11 @@ NAME = program
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 SRCS = main.cpp\
-	Serialize.cpp
+	Serialize.cpp\
+	Data.cpp
 
-HEADERS = Serialize.hpp
+HEADERS = Serialize.hpp\
+		Data.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

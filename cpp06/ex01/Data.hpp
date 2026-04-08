@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 11:21:44 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/08 20:28:58 by emad             ###   ########.fr       */
+/*   Created: 2026/04/08 16:55:26 by emad              #+#    #+#             */
+/*   Updated: 2026/04/08 20:36:54 by emad             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serialize.hpp"
-#include "Data.hpp"
+#ifndef DATA_HPP
+#define DATA_HPP
 
-int	main(void)
+#include <stdint.h>
+#include <string>
+
+struct Data
 {
-	std::cout << "Hello Funny World\n";
-}
+    int             id;
+    std::string&    name;
+};
+
+#endif
