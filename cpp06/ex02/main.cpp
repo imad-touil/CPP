@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 14:40:09 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/09 16:42:13 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/09 17:35:35 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,20 @@
 // {
 // 	system("leaks -q program");
 // }
-// atexit(ll);
+// 	atexit(ll);
 
 int	main(void)
 {
 	srand(time(NULL));
-	std::cout << "|-------- PTR --------|\n";
+	std::cout << "|-------- imatouil --------|\n";
 	for (int i = 0; i < 3; i++)
 	{
 		Base* p = generate();
+		std::cout << "PTR: ";
 		identify(p);
-		delete p;
-	}
-	std::cout << "|-------- REF --------|\n";
-	for (int i = 0; i < 3; i++)
-	{
-		Base* p = generate();
+		std::cout << "REF: ";
 		identify(*p);
 		delete p;
 	}
+	return (0);
 }

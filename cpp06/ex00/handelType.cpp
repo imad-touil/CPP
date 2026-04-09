@@ -6,86 +6,71 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 22:40:53 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/07 22:41:07 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/09 17:57:10 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-void	handelInt(const std::string& literal)
+static void	printChar(double d)
 {
-	std::stringstream	ss(literal);
-	long				val;
-	ss >> val;
-
-	if (val < 0 || val > 127)
+	if (std::isnan(d) || std::isinf(d)
+		|| d < std::numeric_limits<char>::min()
+		|| d > std::numeric_limits<char>::max())
 		std::cout << "char: impossible\n";
-	else if (!isprint(static_cast<int>(val)))
+	else if (!isprint(static_cast<int>(d)))
 		std::cout << "char: Non displayable\n";
 	else
-		std::cout << "char: '" << static_cast<char>(val) << "'\n";
-	if (val > INT_MAX || val < INT_MIN)
+		std::cout << "char: '" << static_cast<char>(d) << "'\n";
+}
+
+static void	printInt(double d)
+{
+	if (std::isnan(d) || std::isinf(d)
+		|| d > std::numeric_limits<int>::max()
+		|| d < std::numeric_limits<int>::min())
 		std::cout << "int: impossible\n";
 	else
-		std::cout << "int: " << static_cast<int>(val) << "\n";
-	std::cout	<< std::fixed << std::setprecision(1) << "float: "
-				<< static_cast<float>(val) << "f\n";
-	std::cout	<< std::fixed << std::setprecision(1) << "double: "
-				<< static_cast<double>(val) << "\n";
+		std::cout << "int: " << static_cast<int>(d) << "\n";
+}
+
+static void	printFloatDouble(double d)
+{
+	if (d == static_cast<int>(d))
+		std::cout << std::fixed << std::setprecision(1);
+	else
+		std::cout << std::fixed << std::setprecision(6);
+
+	std::cout << "float: " << static_cast<float>(d) << "f\n";
+	std::cout << "double: " << d << "\n";
+}
+void	handelInt(const std::string& literal)
+{
+	long val = std::strtol(literal.c_str(), NULL, 10);
+	double d = static_cast<double>(val);
+
+	printChar(d);
+	printInt(d);
+	printFloatDouble(d);
 }
 
 void	handelFloat(const std::string& literal)
 {
 	std::string sub = literal.substr(0, literal.length() - 1);
+	double d = std::strtod(sub.c_str(), NULL);
 
-	std::stringstream ss(sub);
-	double d;
-	ss >> d;
-	if (d < 0 || d > 127)
-		std::cout << "char: impossible\n";
-	else if (!isprint(static_cast<int>(d)))
-		std::cout << "char: Non displayable\n";
-	else
-		std::cout << "char: '" << static_cast<char>(d) << "'\n";
-	if (d > INT_MAX || d < INT_MIN)
-		std::cout << "int: impossible\n";
-	else
-		std::cout << "int: " << static_cast<int>(d) << "\n";
-	int len = 1;
-	size_t dot = literal.find('.');
-	if (dot != std::string::npos)
-		len = literal.length() - dot - 2;
-	std::cout << std::fixed << std::setprecision(len);
-	std::cout << "float: " << static_cast<float>(d) << "f\n";
-	std::cout << "double: " << d << "\n";
+	printChar(d);
+	printInt(d);
+	printFloatDouble(d);
 }
 
 void	handelDouble(const std::string& literal)
 {
-	std::stringstream ss(literal);
-	double d;
-	ss >> d;
-	if (d < 0 || d > 127)
-		std::cout << "char: impossible\n";
-	else if (!isprint(static_cast<int>(d)))
-		std::cout << "char: Non displayable\n";
-	else
-		std::cout << "char: '" << static_cast<char>(d) << "'\n";
-	if (d > INT_MAX || d < INT_MIN)
-		std::cout << "int: impossible\n";
-	else
-		std::cout << "int: " << static_cast<int>(d) << "\n";
-	int precision = 1;
-	size_t dot = literal.find('.');
-	if (dot != std::string::npos)
-	{
-		precision = literal.length() - dot - 1;
-		if (precision == 0)
-			precision = 1;
-	}
-	std::cout << std::fixed << std::setprecision(precision);
-	std::cout << "float: " << static_cast<float>(d) << "f\n";
-	std::cout << "double: " << d << "\n";
+	double d = std::strtod(literal.c_str(), NULL);
+
+	printChar(d);
+	printInt(d);
+	printFloatDouble(d);
 }
 
 void	handelPseudo(const std::string& literal)
