@@ -6,7 +6,7 @@
 /*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 11:14:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/08 20:33:57 by emad             ###   ########.fr       */
+/*   Updated: 2026/04/08 21:50:55 by emad             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Serialize
 		~Serialize();
 	public:
 		static uintptr_t	serialize(Data* ptr);
-		Data*				deserialize(uintptr_t raw);
+		static Data*				deserialize(uintptr_t raw);
 };
 
 #endif
