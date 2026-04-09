@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 16:55:26 by emad              #+#    #+#             */
-/*   Updated: 2026/04/09 11:31:51 by imatouil         ###   ########.fr       */
+/*   Created: 2026/04/09 14:40:16 by imatouil          #+#    #+#             */
+/*   Updated: 2026/04/09 16:13:52 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-#define DATA_HPP
+#include "Base.hpp"
 
-#include <stdint.h>
-#include <string>
+Base::~Base() {}
 
-struct Data
-{
-	int			id;
-	std::string	login;
-};
-
-#endif

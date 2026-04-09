@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   detectType.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 11:28:06 by emad              #+#    #+#             */
-/*   Updated: 2026/04/08 15:24:53 by emad             ###   ########.fr       */
+/*   Updated: 2026/04/09 13:17:07 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,29 @@ int isInt(const std::string& literal)
     return (1);
 }
 
+int isDouble(const std::string& literal)
+{
+	if (literal.find('.') == std::string::npos)
+		return (0);
+	std::stringstream ss(literal);
+	double value;
+	ss >> value;
+	return (!ss.fail() && ss.eof());
+}
+
+int isFloat(const std::string& literal)
+{
+	if (literal.length() < 2 || literal[literal.length() - 1] != 'f')
+		return (0);
+	if (literal.find('.') == std::string::npos)
+		return (0);
+	std::string sub = literal.substr(0, literal.length() - 1);
+	std::stringstream ss(sub);
+	double v;
+	ss >> v;
+	return (!ss.fail() && ss.eof());
+}
+
 e_type	detectType(const std::string& literal)
 {
 	if (isPseudo(literal))
@@ -48,6 +71,10 @@ e_type	detectType(const std::string& literal)
 		return (CHAR);
 	else if (isInt(literal))
         return (INT);
+	else if (isFloat(literal))
+        return (FLOAT);
+	else if (isDouble(literal))
+        return (DOUBLE);
 	return (INVALID);
 }
 

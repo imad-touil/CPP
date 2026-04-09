@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 16:55:26 by emad              #+#    #+#             */
-/*   Updated: 2026/04/09 11:31:51 by imatouil         ###   ########.fr       */
+/*   Created: 2026/04/09 14:40:12 by imatouil          #+#    #+#             */
+/*   Updated: 2026/04/09 16:12:47 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-#define DATA_HPP
+#ifndef BASE_HPP
+#define BASE_HPP
 
-#include <stdint.h>
-#include <string>
+#include <iostream>
+#include <cstdlib>
 
-struct Data
+class	Base
 {
-	int			id;
-	std::string	login;
+	public:
+		virtual ~Base();
 };
+
+Base*	generate(void);
+void	identify(Base* p);
+void	identify(Base& p);
 
 #endif

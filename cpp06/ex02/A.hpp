@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 16:55:26 by emad              #+#    #+#             */
-/*   Updated: 2026/04/09 11:31:51 by imatouil         ###   ########.fr       */
+/*   Created: 2026/04/09 14:43:36 by imatouil          #+#    #+#             */
+/*   Updated: 2026/04/09 15:22:24 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-#define DATA_HPP
+#ifndef A_HPP
+#define A_HPP
 
-#include <stdint.h>
-#include <string>
+#include "Base.hpp"
 
-struct Data
-{
-	int			id;
-	std::string	login;
-};
+class A : public Base {};
 
 #endif
