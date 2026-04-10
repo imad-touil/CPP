@@ -1,26 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/10 13:10:45 by imatouil          #+#    #+#             */
+/*   Updated: 2026/04/10 13:22:25 by imatouil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
-// using namespace std;
 
-// class Animal
-// {
-// public:
-//     virtual void makeSound()
-//     {
-//         std::cout << "Animal sound\n";
-//     }
-// };
-
-// class Dog : public Animal
-// {
-// public:
-//     void makeSound()
-//     {
-//         std::cout << "Woof\n";
-//     }
-// };
-
-// int main(void)
-// {
-//   Animal* a = new Dog();
-//   a->makeSound();
-// }
+int main(void)
+{
+	int *a = new int();
+	std::cout << *a << std::endl;
+}
