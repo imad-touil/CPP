@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 01:58:49 by imatouil          #+#    #+#             */
-/*   Updated: 2026/04/10 14:32:26 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/04/10 16:55:53 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,15 @@ class Array
 		
 	public:
 		Array() : _data(NULL), _size(0) {}
-		Array(unsigned int n) : _size(n) { _data = new T[_size](); }
+
+		Array(unsigned int n) : _size(n)
+		{
+			_data = new T[_size]();
+		}
 		Array(const Array& obj) : _size(obj._size)
 		{
 			_data = new T[_size];
-			for (int i = 0; i < _size; i++)
+			for (unsigned int i = 0; i < _size; i++)
 				_data[i] = obj._data[i];
 		}
 		Array&	operator=(const Array& obj)
@@ -38,27 +42,28 @@ class Array
 				delete [] _data;
 				_size = obj._size;
 				_data = new T[_size];
-				for (int i = 0; i < _size; i++)
+				for (unsigned int i = 0; i < _size; i++)
 					_data[i] = obj._data[i];
 			}
 			return (*this);
 		}
-		~Array() { delete[] _data; }
-
+		~Array()
+		{
+			delete[] _data;
+		}
 		T& operator[](unsigned int index)
 		{
 			if (index >= _size)
 				throw std::exception();
 			return (_data[index]);
 		}
-
 		const T& operator[](unsigned int index) const
 		{
 			if (index >= _size)
 				throw std::exception();
 			return (_data[index]);
 		}
-		unsigned int	size()
+		unsigned int	size() const
 		{
 			return (_size);
 		}
