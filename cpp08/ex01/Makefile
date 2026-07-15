@@ -5,9 +5,9 @@
 NAME = program
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = main.cpp
+SRCS = main.cpp Span.cpp
 
-HEADERS = easyfind.hpp
+HEADERS = Span.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
