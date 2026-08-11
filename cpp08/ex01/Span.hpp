@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 01:40:55 by imatouil          #+#    #+#             */
-/*   Updated: 2026/07/15 16:30:06 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/08/11 10:55:12 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <exception>
 
 class MaxElementException : public std::exception
 {
@@ -43,6 +44,13 @@ class Span
 		int		longestSpan() const;
 		int		shortestSpan() const;
 		void	getVect() const;
+		template <typename I>
+		void	addRange(I begin, I end)
+		{
+			if (std::distance(begin, end) + vect.size() > _maxSize)
+				throw MaxElementException();
+			vect.insert(vect.end(), begin, end);
+		}
 };
 
 #endif
