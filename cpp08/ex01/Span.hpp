@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 01:40:55 by imatouil          #+#    #+#             */
-/*   Updated: 2026/08/11 10:55:12 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/08/11 11:34:02 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ class Span
 		template <typename I>
 		void	addRange(I begin, I end)
 		{
-			if (std::distance(begin, end) + vect.size() > _maxSize)
+			std::size_t	rangeSize = std::distance(begin, end);
+			if (rangeSize + vect.size() > _maxSize)
 				throw MaxElementException();
 			vect.insert(vect.end(), begin, end);
 		}
