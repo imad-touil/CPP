@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:18:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/28 20:07:26 by emad             ###   ########.fr       */
+/*   Updated: 2026/09/29 10:55:29 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <sstream>
 
 #define RESET  "\033[0m"
 #define RED     "\033[31m"
@@ -29,4 +30,7 @@ class BitcoinExchange
 		BitcoinExchange(const BitcoinExchange& obj);
 		BitcoinExchange&	operator=(const BitcoinExchange& obj);
 		~BitcoinExchange();
+
+		void	loadDataBase(const std::string& filename);
+		void	processInput(const std::string& filename);
 };
