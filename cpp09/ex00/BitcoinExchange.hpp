@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emad <emad@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:18:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/02 16:53:15 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/09/28 20:07:26 by emad             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,10 @@
 class BitcoinExchange
 {
 	private:
-		std::map<std::string, double>	_DataBase;
-		const std::string&				filename;
-		void	loadData();
-		void	checkLine(std::string& line);
-		bool	isValidDate(std::string& date) const;
-		bool	isValidValue(double	value) const;
-		double	getExchangeRate(const std::string& date) const;
+		std::map<std::string, double>	_dataBase;
 	public:
 		BitcoinExchange();
 		BitcoinExchange(const BitcoinExchange& obj);
 		BitcoinExchange&	operator=(const BitcoinExchange& obj);
 		~BitcoinExchange();
-		void	Exchange(const std::string& filename);
 };
