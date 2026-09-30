@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:18:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/30 09:40:06 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/09/30 11:32:37 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <map>
 #include <sstream>
-#include <cstdlib>
+#include <algorithm>
+#include <map>
 
 class BitcoinExchange
 {

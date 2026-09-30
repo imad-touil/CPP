@@ -5,9 +5,9 @@
 NAME = RPN
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRCS = main.cpp
+SRCS = main.cpp RPN.cpp
 
-HEADERS = easyfind.hpp
+HEADERS = RPN.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
