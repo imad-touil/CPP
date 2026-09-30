@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 19:23:29 by emad              #+#    #+#             */
-/*   Updated: 2026/09/30 09:58:17 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/09/30 11:30:37 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,13 +98,9 @@ void	BitcoinExchange::processInput(const std::string& filename)
 	while (std::getline(file, line))
 	{
 		std::stringstream	ss(line);
-		std::string			date;
-		std::string			separator;
-		std::string			value;
-		ss >> date;
-		ss >> separator;
-		ss >> value;
-		if (date.empty() || separator != "|" || value.empty())
+		std::string			date, separator, value, extra;
+		ss >> date >> separator >> value;
+		if (date.empty() || separator != "|" || value.empty() || (ss >> extra))
 		{
 			std::cout << "Error: bad input => " << line << std::endl;
 			continue ;

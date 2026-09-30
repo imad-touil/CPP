@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:20:25 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/29 18:50:03 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/09/30 11:29:26 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,5 @@ int	main(int ac, char **av)
 		std::cerr << e.what() << '\n';
 		return (1);
 	}
-	
-
 	return 0;
 }
