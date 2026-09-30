@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 10:18:27 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/29 10:55:29 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/09/30 09:40:06 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 #include <string>
 #include <map>
 #include <sstream>
-
-#define RESET  "\033[0m"
-#define RED     "\033[31m"
+#include <cstdlib>
 
 class BitcoinExchange
 {
@@ -33,4 +31,6 @@ class BitcoinExchange
 
 		void	loadDataBase(const std::string& filename);
 		void	processInput(const std::string& filename);
+		bool	validValue(const std::string& value) const; // Check this shit
+		bool	validDate(const std::string& date) const;
 };
