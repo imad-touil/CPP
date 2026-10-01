@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 16:10:36 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/30 18:55:56 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/10/01 15:38:49 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(int ac, char **av)
 	try
 	{
 		PmergeMe	p(av);
-		p.printVector();
+		p.printVector("Before: ");
+		p.printDeque("Before: ");
 	}
 	catch(const std::exception& e)
 	{

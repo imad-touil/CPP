@@ -6,7 +6,7 @@
 /*   By: imatouil <imatouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 16:10:41 by imatouil          #+#    #+#             */
-/*   Updated: 2026/09/30 19:08:20 by imatouil         ###   ########.fr       */
+/*   Updated: 2026/10/01 15:40:57 by imatouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,23 @@ class PmergeMe
 	private:
 		std::vector<int>	_vect;
 		std::deque<int>		_deq;
-		bool	parsNumbers(std::string av, int &number);
+		struct Pair
+		{
+			int small;
+			int big;
+		};
+		struct ChainItem
+		{
+			int value;
+			int pairId;
+			bool isBig;
+		};
+		
+		bool	parsNumbers(const std::string& av, int &number);
+
+		void	sortVectorRecursive(std::vector<int>& values);
+		void	sortDequeRecursive(std::deque<int>& values);
+	
 	public:
 		PmergeMe();
 		PmergeMe(char **av);
@@ -36,7 +52,8 @@ class PmergeMe
 
 		void	sortVector();
 		void	sortDeque();
-		void	printVector() const;
+		void	printVector(const std::string& condition) const;
+		void	printDeque(const std::string& condition) const;
 };
 
 #endif
